@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Lora', serif;
+}
+h1{
+    text-align: center;
+    color: coral;
+    margin-top: 10px;
+}
+header{
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+.logo{
+    display: flex;
+    
+}
+.logo img{
+    height: 100px;
+}
+nav ul{
+    display:flex;
+    list-style: none;
+}
+nav ul li{
+    padding: 10px;
+    
+}
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: chocolate;
+    font-weight: 900;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    width:90vw;
+    margin:20px auto;
+    padding: 10px;
+    box-shadow: inset 5px 5px 5px #232323;
+    border: 1px solid #454545;
+}
+.heading{
+    color: crimson;
+    text-align: left;
+    font-size: xx-large;
+}
+.subHeading{
+    color: rgb(152, 79, 94);
+    text-align: left;
+    font-size: x-large;
+}
+.test{
+    width: 300px;
+    margin:20px auto;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+form{
+    width:300px; 
+    margin:0px auto; 
+    padding:0 10px;
+}
+form input , textarea{
+    width: 280px; 
+    margin:10px auto;
+    outline: none;
+    border: 1px solid burlywood;
+    border-radius: 5px;
+    padding: 5px;
+}
+form input:hover , textarea:hover{
+   box-shadow: 5px 5px 10px burlywood;
+}
+ form input[type='submit']{
+    width:fit-content;
+    padding: auto 10px;
+    display: flex;
+    justify-content: center;
+    background-color:  burlywood;
+    color: white;
+    cursor: pointer;
+}
+
+form input[type='submit']:hover{
+    
+    background-color:  white;
+    color: burlywood;
+    
+} 
+.form .container form{
+    width: unset; 
+    margin:0px auto; 
+    padding:0 10px;
+}
+.form .container form input , textarea{
+    width:88vw; 
+    margin:10px auto;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+.form .container form input:hover , textarea:hover{
+    border: 1px solid burlywood;
+   box-shadow: none;
+}
+.form form input[type='submit']{
+    width:fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color:  burlywood;
+    color: white;
+    cursor: pointer;
+    border: 1px solid burlywood;
+}
+
+.form form input[type='submit']:hover{
+    
+    background-color:  white;
+    color: burlywood;
+    
+}
+#blur{
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0,0,0,.55);
+    display: none;
+    position:fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+#editNotes h1{
+    margin:0;
+}
+#editNotes span{
+    display: flex;
+    height: 30px;
+    width: 30px; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    /* border:1px solid gray; */
+}
+.edbtn{
+    margin-top:20px;
+    display: flex;
+}
+.addbtn{
+    
+    outline:none;
+    font-size: 2rem;
+    border-radius: 0px;
+    padding: 0px 0px;
+    border: 1px solid crimson;
+    color: black;
+    cursor: pointer;
+    
+}
+.btn{
+    height: fit-content;
+    outline:none;
+    border:1px solid crimson;
+    border-radius: 10px;
+    padding: 10px;
+    background-color:  crimson;
+    color: white;
+    cursor: pointer;
+    margin:0 5px;
+}
+.btn:hover{
+    background-color:  white;
+    color: crimson;
+    border-color: crimson;
+}
+.active{
+    background-color:  white;
+    color: crimson;
+    border-color: crimson;
+}
+
+.pagination{
+    width:98vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.comment form{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin:0;
+}
+.comment h3{
+    text-align: left;
+    color: coral;
+    margin-top: 10px;
+}
+.comshow{
+    width: fit-content;
+    margin-left: 20px;
+    display: flex;
+    
+}
+
+.comshow .usern{
+    padding: 10px;
+    margin: 5px 5px;
+     border: 1px solid burlywood; 
+    display: flex;
+    box-shadow: 2px 2px 20px  burlywood;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.comshow .ucomshow{
+    padding: 10px;
+    margin:20px 5px 5px 5px;
+     border: 1px solid burlywood; 
+    display: flex;
+    box-shadow: 2px 2px 20px  burlywood;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+   
+}
+.onSubmit{
+    display:flex;
+    width:100vw;
+    box-shadow: 5px 5px 10px rgba(30,25,78); 
+    background: #ffffff;
+    }
+.onSubmit p{
+    padding:15px 15px 15px 0px;
+    font-size:1.2rem;
+}
+.onSubmit p .success{
+    font-size:2rem;
+    color:blue;
+}
+.onSubmit p .failed{
+    font-size:2rem;
+    color:red;
+}
+.onSubmit img{
+    height: 20px;
+    margin:10px;
+    cursor: pointer;
+} 
