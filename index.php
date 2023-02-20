@@ -1,4 +1,6 @@
+<?php
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +15,20 @@
 </head>
 <body>
 <?php
-    include 'partials/header.php';
+    echo '
+    <header>
+            <div class="logo"><img src="admin/img/ee with sk-logos_transparent.png" alt="logo"></div>
+            <div class="nav">
+                <nav>
+                    <ul>
+                        <li><a href="index.php">Notes</a></li>
+                        <li><a href="test.php">Test</a></li>
+                        <li><a href="admin">Admin Panel</a></li>
+                    </ul>
+                </nav>
+            </div>
+           
+    </header>';
     ?>
     <main>
       <?php
@@ -29,7 +44,6 @@
                   <h2 class='subHeading'>".$row['subHeading']."</h2>
                   <div class='img'><img src='' alt=''></div>
                   <div class='content'>“".$row['content']."”</div>
-                  
               </div>";
           }
       

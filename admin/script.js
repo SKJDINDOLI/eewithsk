@@ -57,7 +57,7 @@ if(document.getElementById("crossContact")){
       let no_pages=next.previousElementSibling.id.substring(1,);
       
        let btn_count=document.getElementsByClassName("page")[0].id.substring(4,);
-       console.log(btn_count)
+       
        document.getElementById('p'+btn_count).classList.add("active");
       //pagination number button
       for(let i=1; i<=no_pages; i++){
@@ -81,4 +81,18 @@ if(document.getElementById("crossContact")){
           }  
         window.location=`index.php?page=${btn_count}`;  
       })
+    //   let clearT=()=>{
+    //     clearInterval(a);
+        
+    //   }
+    //   let a=setInterval(() => {
+    //     btn_count++;
+    //     if(btn_count>no_pages){
+    //         btn_count=no_pages;
+    //         clearT();
+    //     }else{
+    //     window.location=`index.php?page=${btn_count}`;
+    //     }
+    //   },3000);
+      
       

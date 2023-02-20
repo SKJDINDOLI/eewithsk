@@ -63,6 +63,10 @@ main{
     text-align: left;
     font-size: x-large;
 }
+.subHeading .topic_img{
+    /* max-width: 400px; */
+    height: 200px;
+}
 .test{
     width: 300px;
     margin:20px auto;

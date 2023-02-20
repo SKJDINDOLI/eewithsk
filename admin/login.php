@@ -60,6 +60,11 @@
     </div>";}
     ?>
     <main>
+    <div class='onSubmit' id='onSubmit'>
+        <img src='icon/cross.png' id='crossContact' alt='cross icon'>
+        <p><span class='success'>Username:</span><span class="failed">sunil</span></p>
+        <p><span class='success'>Password:</span><span class="failed">sunil</span></p>
+    </div>
         <div class="form">
         <h1>Login</h1>
             <form action="login.php" method="post">
