@@ -35,19 +35,46 @@
       include 'admin/partials/connection.php';
       $sql="SELECT*FROM `eesk`.`notes`";
       $result=mysqli_query($conn,$sql);
+      $total_entery=mysqli_num_rows($result);
+      if(isset($_GET['page'])){
+        $page=$_GET['page'];
+    }else{
+        $page=1;
+    }
+        $entery=3;
+        $show_entery=$page*$entery;
+        $no_pages=$total_entery/$entery;
+        if(is_float($no_pages)){
+            $no_pages=(int)$no_pages+1;
+    }
+        $entery_start=$show_entery-$entery;
+      $sql="SELECT * FROM `eesk`.`notes` ORDER BY `sno` DESC LIMIT $entery_start,$entery";
+      $result=mysqli_query($conn,$sql);
+      echo'<input type="hidden" name="page" class="page" id="page'.$page.'">';
       while($row=mysqli_fetch_assoc($result))  
              {
              
              echo "<div class='container'>
                   <div class='category'>".$row['category']."</div>
-                  <h1 class='heading'>".$row['heading']."</h1>
-                  <h2 class='subHeading'>".$row['subHeading']."</h2>
-                  <div class='img'><img src='' alt=''></div>
+                  <div class='heading'>".$row['heading']."</div>
+                  <div class=''></div>
+                  <div class='subHeading'><img class='topic_img' src='admin/topic_img/".$row['sno'].$row['subHeading']."' alt='".$row['heading']." image'></div>
                   <div class='content'>“".$row['content']."”</div>
               </div>";
           }
       
       ?>
+      <div class="pagination" id="pagination">
+      <div class='edbtn'>
+                <button class='prev btn' id='prev'>prev</button><?php
+            for($k=1;$k<=$no_pages;$k++){
+                    echo "
+                <button class='p".$k." btn' id='p".$k."'>".$k."</button>
+                ";
+            }
+            ?><button class='next btn'id='next'>next</button>
+            </div>
+            </div>
        <script>
         
        </script>
